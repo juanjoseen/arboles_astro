@@ -1,0 +1,91 @@
+---
+import contact from "../data/contact.ts";
+---
+
+<!-- main-footer -->
+<footer class="main-footer">
+    <div class="auto-container">
+        <div class="footer-top">
+            <div class="top-inner" style="display: flex; justify-content: center;">
+                <img style="width: 50%;" src="images/logo_white.png" alt="" />
+            </div>
+        </div>
+        <div class="widget-section">
+            <div class="row clearfix">
+                <div class="col-lg-6 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget links-widget">
+                        <div class="widget-content">
+                            <ul class="links-list clearfix">
+                                <li>Envíanos email al</li>
+                                <li>
+                                    <a href={`mailto:${contact.email}`}>
+                                        {contact.email}
+                                    </a>
+                                </li>
+                                <li>Envíanos WhatsApp al</li>
+                                <li>
+                                    <a href={contact.whatsapp} target="_blank">
+                                        {contact.phone}
+                                    </a>
+                                </li>
+                                <li>¡Siguenos!</li>
+                                <ul class="media-links-horizontal clearfix">
+                                    <li>
+                                        <a href={contact.twitter} target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href={contact.facebook} target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href={contact.instagram} target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget links-widget ml-70">
+                        <div class="widget-title">
+                            <h4>Actividades</h4>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="links-list clearfix">
+                                <li><a href="/senderismo">Senderismo</a></li>
+                                <li><a href="/camping">Camping</a></li>
+                                <li><a href="/mas">más...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget contact-widget">
+                        <div class="widget-title">
+                            <h4>Nosotros</h4>
+                            <h4>Contacto</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom centred">
+        <div class="auto-container">
+            <div class="copyright">
+                <p>
+                    Todos los derechos rservados 
+                    <a href="/">
+                        @Bosquesdelosarbolesdenavidad
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- main-footer end -->

@@ -1,0 +1,26 @@
+---
+import TestimonialBox from "./TestimonialBox.astro";
+import testimonials from "../data/testimonials.ts";
+---
+
+<!-- testimonial-section -->
+<section class="testimonial-section bg-color-2">
+    <div class="outer-container clearfix">
+        <div class="testimonial-inner">
+            <div class="testimonial-content">
+                <div class="single-item-carousel owl-carousel owl-theme owl-nav-none">
+                    {
+                        testimonials.map((testimonial) => (
+                            <TestimonialBox
+                                author={testimonial.author}
+                                description={testimonial.description}
+                                image={testimonial.image}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial-section end -->

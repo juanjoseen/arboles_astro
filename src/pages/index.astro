@@ -1,16 +1,20 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import MainHeader from "../components/MainHeader.astro";
+import MainBannerSection from "../components/MainBannerSection.astro";
+import MainActivityList from "../components/MainActivityList.astro";
+import MainBanner from "../components/MainBanner.astro";
+import MainAbout from "../components/MainAbout.astro";
+import MainTestimonial from "../components/MainTestimonial.astro";
+import MainFooter from "../components/MainFooter.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Bosque de los Árboles de Navidad">
+	<MainHeader current="inicio" />
+    <MainBannerSection />
+    <MainActivityList />
+    <MainBanner />
+    <MainAbout />
+    <MainTestimonial />
+    <MainFooter />
+</MainLayout>

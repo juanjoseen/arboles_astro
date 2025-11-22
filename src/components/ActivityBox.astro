@@ -1,0 +1,42 @@
+---
+export interface Props {
+    url: string;
+    cover: string;
+    flatIcon?: string;
+    svgIcon?: string;
+    title: string;
+    description: string;
+}
+
+const { url, cover, flatIcon, svgIcon, title, description } = Astro.props;
+---
+
+<div class="item activities-block">
+    <div class="activities-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+        <div class="inner-box">
+            <div class="image-box">
+                <a href={url}>
+                    <img src={cover} alt="" />
+                </a>
+            </div>
+            <div class="lower-content">
+                <div class="icon-box">
+                    <div class="shape" style="background-image: url(images/shape-5.png);">
+                    </div>
+                    <div class="overlay-shape" style="background-image: url(images/shape-6.png);">
+                    </div>
+                    {
+                        flatIcon ? <i class={flatIcon}></i> : svgIcon ? <img src={svgIcon} alt="Actividades escolares" class="activity-icon"> : null
+                    }
+                </div>
+                <h3>
+                    <a href={url}>{title}</a>
+                </h3>
+                <p>{description}</p>
+                <div class="link">
+                    <a href={url}>Conoce más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

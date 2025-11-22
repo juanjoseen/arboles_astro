@@ -1,0 +1,11 @@
+.activity-icon {
+    margin: 15px auto;
+    filter: none;
+    transition: filter 0.3s ease;
+    width: 80px; 
+    height: 80px;
+}
+
+.activities-block:hover .activity-icon {
+    filter: brightness(0) invert(1); /* Convierte la imagen a color blanco */
+}
