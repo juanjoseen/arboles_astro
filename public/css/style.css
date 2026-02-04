@@ -1967,6 +1967,29 @@ div#mCSB_1_container {
   font-weight: 700;
 }
 
+.list-style-check-large li {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 36px;
+  padding-left: 48px;
+  margin-bottom: 20px;
+}
+
+.list-style-check-large li:last-child {
+  margin-bottom: 0px;
+}
+
+.list-style-check-large li:before {
+  position: absolute;
+  content: "\f058";
+  font-family: 'Font Awesome 5 Pro';
+  left: 0px;
+  top: 0px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
 .content_block_one .content-box .list-style-one {
   margin-bottom: 44px;
 }

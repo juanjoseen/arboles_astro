@@ -1,6 +1,6 @@
 ---
 export interface Props {
-    title: string;
+	title: string;
 }
 
 const { title } = Astro.props;
@@ -8,89 +8,93 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
 
-        <title>{title}</title>
+		<title>{title}</title>
 
-        <!-- Fav Icon -->
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<!-- Fav Icon -->
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <!-- Stylesheets -->
-        <link href="css/font-awesome-all.css" rel="stylesheet" />
-        <link href="css/flaticon.css" rel="stylesheet" />
-        <link href="css/owl.css" rel="stylesheet" />
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
-        <link href="css/animate.css" rel="stylesheet" />
-        <link href="css/color.css" rel="stylesheet" />
-        <link href="css/style.css" rel="stylesheet" />
-        <link href="css/responsive.css" rel="stylesheet" />
-        <link href="css/custom-font.css" rel="stylesheet" />
-        <link href="css/custom-hover.css" rel="stylesheet" />
-    </head>
-    <!-- page wrapper -->
-    <body>
-        <div class="boxed_wrapper">
-            <!-- preloader -->
-            <div class="preloader">
-                <div class="boxes">
-                    <div class="box">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="box">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="box">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="box">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <!-- preloader end -->
-            <slot />
-        </div>
-    </body>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Stylesheets -->
+		<link href="css/font-awesome-all.css" rel="stylesheet" />
+		<link href="css/flaticon.css" rel="stylesheet" />
+		<link href="css/owl.css" rel="stylesheet" />
+		<link href="css/bootstrap.css" rel="stylesheet" />
+		<link href="css/jquery.fancybox.min.css" rel="stylesheet" />
+		<link href="css/animate.css" rel="stylesheet" />
+		<link href="css/color.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/responsive.css" rel="stylesheet" />
+		<link href="css/custom-font.css" rel="stylesheet" />
+		<link href="css/custom-hover.css" rel="stylesheet" />
+	</head>
+	<!-- page wrapper -->
+	<body>
+		<div class="boxed_wrapper">
+			<!-- preloader -->
+			<div class="preloader">
+				<div class="boxes">
+					<div class="box">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="box">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="box">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div class="box">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<!-- preloader end -->
+			<slot />
+			<!-- scroll to top -->
+			<button class="scroll-top scroll-to-target" data-target="html">
+				<i class="fal fa-long-arrow-up"></i>
+			</button>
+		</div>
+	</body>
 
-    <!-- jequery plugins -->
-    <script src="/js/jquery.js" is:inline></script>
-    <script src="/js/popper.min.js" is:inline></script>
-    <script src="/js/bootstrap.min.js" is:inline></script>
-    <script src="/js/owl.js" is:inline></script>
-    <script src="/js/wow.js" is:inline></script>
-    <script src="/js/validation.js" is:inline></script>
-    <script src="/js/jquery.fancybox.js" is:inline></script>
-    <script src="/js/appear.js" is:inline></script>
-    <script src="/js/scrollbar.js" is:inline></script>
-    <script src="/js/parallax-scroll.js" is:inline></script>
-    <script src="/js/isotope.js" is:inline></script>
+	<!-- jequery plugins -->
+	<script src="/js/jquery.js" is:inline></script>
+	<script src="/js/popper.min.js" is:inline></script>
+	<script src="/js/bootstrap.min.js" is:inline></script>
+	<script src="/js/owl.js" is:inline></script>
+	<script src="/js/wow.js" is:inline></script>
+	<script src="/js/validation.js" is:inline></script>
+	<script src="/js/jquery.fancybox.js" is:inline></script>
+	<script src="/js/appear.js" is:inline></script>
+	<script src="/js/scrollbar.js" is:inline></script>
+	<script src="/js/parallax-scroll.js" is:inline></script>
+	<script src="/js/isotope.js" is:inline></script>
 
-    <!-- main-js -->
-    <script src="js/script.js" is:inline></script>
+	<!-- main-js -->
+	<script src="/js/script.js" is:inline></script>
 </html>

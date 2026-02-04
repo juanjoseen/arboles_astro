@@ -69,6 +69,10 @@
 	color: #58a937;
 }
 
+.list-style-check-large li:before {
+	color: #58a937;
+}
+
 .activities-block-one .inner-box .lower-content .icon-box {
 	color: #58a937;
 }

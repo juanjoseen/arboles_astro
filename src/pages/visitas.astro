@@ -1,0 +1,18 @@
+---
+import MainHeader from "../components/MainHeader.astro";
+import MainFooter from "../components/MainFooter.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import VisitBanner from "../components/visitas/VisitBanner.astro";
+import VisitText from "../components/visitas/VisitText.astro";
+import VisitBenefits from "../components/visitas/VisitBenefits.astro";
+import VisitPacks from "../components/visitas/VisitPacks.astro";
+---
+
+<MainLayout title="Visitas escolares">
+	<MainHeader current="visitas" />
+	<VisitBanner />
+	<VisitText />
+	<VisitBenefits />
+	<VisitPacks />
+	<MainFooter />
+</MainLayout>

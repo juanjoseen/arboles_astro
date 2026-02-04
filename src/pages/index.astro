@@ -1,20 +1,22 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import MainHeader from "../components/MainHeader.astro";
-import MainBannerSection from "../components/MainBannerSection.astro";
-import MainActivityList from "../components/MainActivityList.astro";
-import MainBanner from "../components/MainBanner.astro";
-import MainAbout from "../components/MainAbout.astro";
-import MainTestimonial from "../components/MainTestimonial.astro";
+import MainBannerSection from "../components/main/MainBannerSection.astro";
+import MainActivityList from "../components/main/MainActivityList.astro";
+import MainBanner from "../components/main/MainBanner.astro";
+import MainAbout from "../components/main/MainAbout.astro";
+import MainTestimonial from "../components/main/MainTestimonial.astro";
+import MainFAQ from "../components/main/MainFAQ.astro";
 import MainFooter from "../components/MainFooter.astro";
 ---
 
 <MainLayout title="Bosque de los Árboles de Navidad">
 	<MainHeader current="inicio" />
-    <MainBannerSection />
-    <MainActivityList />
-    <MainBanner />
-    <MainAbout />
-    <MainTestimonial />
-    <MainFooter />
+	<MainBannerSection />
+	<MainActivityList />
+	<MainBanner />
+	<MainAbout />
+	<MainTestimonial />
+	<MainFAQ />
+	<MainFooter />
 </MainLayout>

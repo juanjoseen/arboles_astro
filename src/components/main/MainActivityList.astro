@@ -1,0 +1,28 @@
+---
+import ActivityBox from "./ActivityBox.astro";
+import activities from "../../data/activities";
+---
+
+<!-- activities-section -->
+<section class="activities-section sec-pad">
+	<div class="auto-container">
+		<div class="upper-box centred">
+			<div class="sec-title">
+				<span class="sub-title">Lo que ofrecemos</span>
+				<h2>Nuestras actividades</h2>
+			</div>
+			<div class="owl-carousel activities-carousel owl-theme">
+				{activities.map((activity) => <ActivityBox {...activity} />)}
+			</div>
+		</div>
+		<div class="lower-box">
+			<div class="sec-title light">
+				<h3>¡No te pierdas nuestros eventos de temporada!</h3>
+				<span class="sub-title"
+					>Comparte momentos únicos rodeados de naturaleza y tradición</span
+				>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- activities-section end -->
