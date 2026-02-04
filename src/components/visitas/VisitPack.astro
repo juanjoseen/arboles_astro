@@ -1,0 +1,55 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+	price: number;
+	image: string;
+	url: string;
+	index: number;
+}
+
+const { title, description, price, image, url } = Astro.props;
+---
+
+<section>
+	<div class="auto-container" style="margin: 80px;">
+		<div class="row clearfix">
+			<div class="col-lg-6 col-md-12 col-sm-12 image-column">
+				<div class="image_block_one">
+					<div class="image-box">
+						<img src={image} alt={title} />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 content-column">
+				<div class="content_block_one">
+					<div class="content-box">
+						<div class="sec-title">
+							<h2>{title}</h2>
+						</div>
+						<h3>{description}</h3>
+						<p>
+							<a
+								href={url}
+								style="color: var(--primary-dark); font-weight: 800;"
+								><h2>Ver mas</h2></a
+							>
+						</p>
+						<div class="price" style="margin: 20px 0">
+							<h2 style="font-weight: 700">${price}</h2>
+							<p
+								style="color: var(--primary-dark); font-weight: 700">
+								Por persona
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="btn-box" style="margin-top: 40px;">
+					<a href="#" target="_blank" class="theme-btn btn-one">
+						Agregar al carrito
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

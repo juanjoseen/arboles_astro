@@ -1,5 +1,6 @@
 ---
-
+import VisitPack from "./VisitPack.astro";
+import visitPacks from "../../data/visitPacks";
 ---
 
 <section>
@@ -10,5 +11,6 @@
 				<h2>Paquetes</h2>
 			</div>
 		</div>
+		{visitPacks.map((pack, index) => <VisitPack {...pack} index={index} />)}
 	</div>
 </section>
