@@ -1,0 +1,32 @@
+---
+import services from "../../data/aditionalServices";
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section class="additional-services">
+    <div class="auto-container" style="margin: 80px auto;">
+        <div class="sec-title text-center">
+            <h3 style="color: var(--primary-color);">
+                Todo para una experiencia inolvidable
+            </h3>
+            <h2 style="font-weight: 800; font-size: 55px;">
+                Servicios adicionales
+            </h2>
+        </div>
+        <div class="row clearfix">
+            {
+                services.map((service) => (
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <ServiceCard {...service} />
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .additional-services {
+        background: #fdfdfd;
+    }
+</style>

@@ -8,16 +8,28 @@ export interface Props {
 	index: number;
 }
 
-const { title, description, price, image, url } = Astro.props;
+const { title, description, price, image, url, index } = Astro.props;
 ---
 
 <section>
 	<div class="auto-container" style="margin: 80px;">
-		<div class="row clearfix">
+		<div
+			class={`row clearfix ${(index + 1) % 2 === 0 ? "flex-row-reverse" : ""}`}
+		>
 			<div class="col-lg-6 col-md-12 col-sm-12 image-column">
 				<div class="image_block_one">
 					<div class="image-box">
 						<img src={image} alt={title} />
+						<div class="shape-circle">
+							<img
+								src="/images/shape_circle.png"
+								alt="Circle Shape"
+							/>
+							<div class="package-number">
+								<span class="label">Paquete</span>
+								<span class="number">{index + 1}</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -38,7 +50,8 @@ const { title, description, price, image, url } = Astro.props;
 						<div class="price" style="margin: 20px 0">
 							<h2 style="font-weight: 700">${price}</h2>
 							<p
-								style="color: var(--primary-dark); font-weight: 700">
+								style="color: var(--primary-dark); font-weight: 700"
+							>
 								Por persona
 							</p>
 						</div>
@@ -53,3 +66,66 @@ const { title, description, price, image, url } = Astro.props;
 		</div>
 	</div>
 </section>
+
+<style>
+	.image-box {
+		position: relative;
+	}
+
+	.shape-circle {
+		position: absolute;
+		left: 45px;
+		bottom: -45px;
+		width: 200px;
+		height: 200px;
+		z-index: 10;
+	}
+
+	.shape-circle img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.package-number {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: #fff;
+		font-family: "Montserrat", sans-serif;
+	}
+
+	.package-number .label {
+		display: block;
+		font-size: 32px;
+		font-weight: 900;
+		line-height: 1.2;
+		text-transform: capitalize;
+	}
+
+	.package-number .number {
+		display: block;
+		font-size: 50px;
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.shape-circle {
+			width: 150px;
+			height: 150px;
+			left: 20px;
+			bottom: -30px;
+		}
+
+		.package-number .label {
+			font-size: 24px;
+		}
+
+		.package-number .number {
+			font-size: 36px;
+		}
+	}
+</style>

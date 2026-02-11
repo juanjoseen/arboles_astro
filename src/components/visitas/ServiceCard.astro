@@ -1,0 +1,92 @@
+---
+export interface Props {
+    name: string;
+    description: string;
+    price: number;
+    image: string;
+}
+
+const { name, description, price, image } = Astro.props;
+---
+
+<div class="service-card shadow-sm">
+    <div class="inner-box">
+        <div class="image-box">
+            <img src={image} alt={name} />
+        </div>
+        <div class="content-box">
+            <h3>{name}</h3>
+            <p>{description}</p>
+            <div class="price">${price}</div>
+            <div class="btn-box">
+                <a href="#" class="theme-btn btn-one">Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-card {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 10px;
+        text-align: center;
+        height: 100%;
+        transition: all 500ms ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-box {
+        margin-bottom: 30px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-box img {
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .content-box h3 {
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: var(--primary-dark);
+    }
+
+    .content-box p {
+        font-size: 15px;
+        line-height: 26px;
+        color: #687c6c;
+        margin-bottom: 25px;
+    }
+
+    .price {
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--primary-dark);
+        margin-bottom: 25px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .theme-btn {
+        background: #31a72d;
+        padding: 12px 30px;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 5px;
+        transition: all 500ms ease;
+    }
+
+    .theme-btn:hover {
+        background: var(--primary-dark);
+    }
+</style>
